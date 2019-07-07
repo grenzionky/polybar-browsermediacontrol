@@ -40,7 +40,7 @@ if Player.PlaybackStatus != "Stopped":
     elif Player.PlaybackStatus=="Paused":
         ICON = ICON_PLAY
     title = Player.Metadata["xesam:title"]
-    output="%{A1:" + PATH + " --playpause:}"+ ICON + "%{A} " + (title[:TITLE_LENGTH] +"..." if len(title) > TITLE_LENGTH and TITLE_LENGTH>0 else title)
+    output="%{A1:" + PATH + " --playpause:}"+ ICON + "%{A} " + (title[:TITLE_LENGTH] +"…" if len(title) > TITLE_LENGTH and TITLE_LENGTH>0 else title)
     print(output)
 else:
     print("")
